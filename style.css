@@ -1,5 +1,10 @@
 .navbar {
-  background:  black;
+  background-color:  black !important;
+  position: fixed; /* Make it stick/fixed */
+  top: -100px; /* Hide the navbar 50 px outside of the top view */
+  width: 100%; /* Full width */
+  transition: top 0.6s; /* Transition effect when sliding down (and up) */
+  z-index: 2;
 }
 
 .navbar .navbar-nav .nav-link {
@@ -27,6 +32,11 @@
   }
 }
 
+#bannière-SO{
+  text-align: center !important;
+  width: 100% !important
+}
+
 * {
   box-sizing: border-box;
 }
@@ -43,7 +53,26 @@
 .flex-item-1 {
   background-color: orange;
   flex: 50%;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  justify-content: center;
 }
+
+h5{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+p{
+  font-size: 10px;
+  text-align:start;
+  padding: 20px;
+  color: white;
+}
+
 
 .flex-item-2 {
   flex: 50%;
@@ -54,31 +83,46 @@
 .flex-item-4 {
   flex: 50%;
   background-color: black;
-  color: white;
+  color: orange;
+  display: flex;
+  align-items: center;
 }
 .flex-item-5 {
   flex: 100%;
 }
 .flex-item-6{
   background-color: orange;
+  color: white;
   flex: 50%;
+  height: 335px;
+  display: flex;
+  align-items: center;
+  
 }
 
 .flex-item-7{
   background-color: black;
+  color: orange;
   flex: 50%;
+  display: flex;
+  align-items: center;
 }
 
 /* Responsive layout - makes a one column-layout instead of a two-column layout */
 @media (max-width: 800px) {
-  .flex-item-1, .flex-item-2, .flex-item-3, .flex-item-4, .flex-item-6, .flex-item-7 {
+  .flex-item-1, .flex-item-2,.flex-item-4, .flex-item-3,  .flex-item-6, .flex-item-7 {
     flex: 100%;
+  }
+  .flex-item-6{
+    height: auto;
   }
 }
 
 
 
-/* footer */
+/*--------------------------- footer ----------------------------------- */
+
+
 .footer-basic {
   padding:40px 0;
   background-color: black;
